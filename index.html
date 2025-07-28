@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Назад в 90-е!</title>
+  <!-- Подключаем пиксельный шрифт Press Start 2P -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      position: relative;
+      font-family: 'Press Start 2P', cursive, sans-serif;
+      font-size: 2em; /* увеличиваем размер шрифта */
+      background-image: url('https://img.freepik.com/premium-vector/clouds-seamless-background-weather-outdoors-cloudscape-sky-vector-wallpaper-web-site-background_570429-16288.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* Полупрозрачный оверлей поверх фона */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Контент поверх оверлея */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+      text-shadow: 2px 2px #fff000;
+    }
+
+    .section {
+      background: #40e0d0;
+      margin: 5px auto;
+      padding: 15px;
+      border-radius: 15px;
+      max-width: 100%;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .section h2 {
+      color: #ffff00;
+      font-size: 1.4em;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 10px auto;
+      max-width: 100%;
+    }
+
+    .highlight {
+      color: #40e0d0;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .vhs-frame {
+      border: 4px double #333;
+      padding: 10px;
+      margin-top: 15px;
+      background: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px #000 inset;
+    }
+
+    .ticker {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #000;
+      color: #00ffcc;
+      font-size: 1em;
+      font-weight: bold;
+      font-family: monospace;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .ticker p {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-text 15s linear infinite;
+    }
+
+    @keyframes scroll-text {
+      from { transform: translateX(0%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px auto;
+    }
+
+    .logos img {
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .logos img:hover {
+      transform: scale(1.1);
+    }
+
+    .music-player {
+      margin: 15px auto;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .section h2 {
+        font-size: 1.2em;
+      }
+      .logos img {
+        height: 40px;
+      }
+      .ticker {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Назад в 90-е! 🎉</h1>
+  <p class="highlight">2-й день свадьбы | Стильная тусовка с ностальгией</p>
+
+  <div class="section vhs-frame">
+    <h2>📅 Когда и где?</h2>
+    <p><strong>24 августа, начало в 13:00</strong></p>
+    <p>Усадьба "Теремок", д.Рудня, ул.Центральная 17, Лепель, Витебская область</p>
+  </div>
+
+  <div class="section vhs-frame">
+    <h2>🧥 Дресс-код</h2>
+    <p>Собираем лучшие образы 90-х!</p>
+    <ul>
+      <li>Спортивные костюмы "Adidas"</li>
+      <li>Лосины, джинсовые жилетки, кепки</li>
+      <li>Очки, цепи, резинки и значки</li>
+    </ul>
+  </div>
+
+  <div class="section vhs-frame">
+    <h2>🎶 Что будет?</h2>
+    <ul>
+      <li>Мега хиты: Руки Вверх, Britney Spears, Иванушки</li>
+      <li>Танцы под "Макарену" и "Ламбаду"</li>
+      <li>Конкурсы, батлы, фанты и призы</li>
+    </ul>
+  </div>
+  
+  <div class="section vhs-frame">
+    <h2>📩 Подтверди участие</h2>
+    <p>Напиши в чат:</p>
+    <div class="box">
+      <a href="https://t.me/+cPS1BnNZ3mw1NDYy" class="button">Telegram!</a>
+    </div>
+    <a href="https://chat.whatsapp.com/GJfaafRyTq2KB2Kmp4o6Lw?mode=ac_t" class="button">WhatsApp!</a>
+  </div>
+
+  <div class="section vhs-frame">
+    <h2>🎧 Плейлист 90-х</h2>
+    <div class="music-player">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXb57FjYWz00c?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+  
+  <div class="ticker">
+    <p>🎬 Привет из 90-х! VHS-вечеринка | Pepsi, Dendy, хиты MTV, и любовь навсегда! 🎮</p>
+  </div>
+
+</body>
+</html>
